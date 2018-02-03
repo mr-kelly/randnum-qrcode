@@ -14,11 +14,11 @@ URL = 'https://mgo2.18jian.cn/index.php/Wechat/Drivers/goto_store?driver_code='
 NUMBER_MIN = 10000000
 NUMBER_MAX = 99999999
 OUTPUT_DIR_NAME = 'output'
-OUTPUT_TXT_NAME = 'list.csv'
 NUMBER_OFFSET_X = 195
 NUMBER_OFFSET_Y = 457
 NUMBER_SIZE = 25
-FONT_FILE = "Helovetica.dfont"
+FONT_FILE = "Helvetica.dfont"
+CORRECT = qrcode.constants.ERROR_CORRECT_H
 
 
 # create dir
@@ -38,7 +38,7 @@ for i in range(10):
 		randnum = random.randint(NUMBER_MIN, NUMBER_MAX)
 		qr = qrcode.QRCode(
 			version=15,
-			error_correction=qrcode.constants.ERROR_CORRECT_H,
+			error_correction=CORRECT,
 			box_size=5,
 			border=12)
 		qr.add_data(URL + str(randnum))
