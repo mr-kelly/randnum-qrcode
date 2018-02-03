@@ -15,6 +15,9 @@ NUMBER_MIN = 10000000
 NUMBER_MAX = 99999999
 OUTPUT_DIR_NAME = 'output'
 OUTPUT_TXT_NAME = 'list.csv'
+NUMBER_OFFSET_X = 195
+NUMBER_OFFSET_Y = 457
+FONT_FILE = "Helovetica.dfont"
 
 
 # create dir
@@ -47,8 +50,8 @@ for i in range(10):
 
 	img = qr.make_image()
 	draw = ImageDraw.Draw(img)
-	font = ImageFont.truetype("Helvetica.dfont", 25)
-	draw.text((195, 457), str(randnum), font=font)
+	font = ImageFont.truetype(FONT_FILE, 25)
+	draw.text((NUMBER_OFFSET_X, NUMBER_OFFSET_Y), str(randnum), font=font)
 
 	print 'Output Number:%s to "%s"' % (randnum, img_path)
 	img.save(img_path)
