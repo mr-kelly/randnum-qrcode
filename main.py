@@ -19,8 +19,9 @@ NUMBER_OFFSET_Y = 457
 NUMBER_SIZE = 25
 FONT_FILE = "Helvetica.dfont"
 CORRECT = qrcode.constants.ERROR_CORRECT_L
-QRCODE_VERSION=5
-
+QRCODE_VERSION=1
+QRCODE_BOX_SIZE=5
+QRCODE_BORDER=12
 
 # create dir
 OUTPUT_DIR_FULL_PATH = os.path.join(FILE_PATH, OUTPUT_DIR_NAME)
@@ -40,8 +41,8 @@ for i in range(10):
 		qr = qrcode.QRCode(
 			version=QRCODE_VERSION,
 			error_correction=CORRECT,
-			box_size=5,
-			border=12)
+			box_size=QRCODE_BOX_SIZE,
+			border=QRCODE_BORDER)
 		qr.add_data(URL + str(randnum))
 		qr.make(fit=True)
 		img_path = os.path.join(OUTPUT_DIR_FULL_PATH, 'img_' + str(randnum) + '.png')
