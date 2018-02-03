@@ -13,8 +13,8 @@ Mac下：
 准备工作(安装依赖库)：
 ```python
 sudo easy_install pip
-pip install qrcode
-pip install image
+sudo pip install qrcode
+sudo pip install image
 ```
 
 
