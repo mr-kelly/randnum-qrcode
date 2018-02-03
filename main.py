@@ -19,6 +19,7 @@ NUMBER_OFFSET_Y = 457
 NUMBER_SIZE = 25
 FONT_FILE = "Helvetica.dfont"
 CORRECT = qrcode.constants.ERROR_CORRECT_L
+QRCODE_VERSION=5
 
 
 # create dir
@@ -37,7 +38,7 @@ for i in range(10):
 	while True:
 		randnum = random.randint(NUMBER_MIN, NUMBER_MAX)
 		qr = qrcode.QRCode(
-			version=15,
+			version=QRCODE_VERSION,
 			error_correction=CORRECT,
 			box_size=5,
 			border=12)
