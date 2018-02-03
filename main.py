@@ -20,7 +20,7 @@ NUMBER_SIZE = 25
 FONT_FILE = "Helvetica.dfont"
 CORRECT = qrcode.constants.ERROR_CORRECT_L
 QRCODE_VERSION=1
-QRCODE_BOX_SIZE=5
+QRCODE_BOX_SIZE=15
 QRCODE_BORDER=12
 
 # create dir
@@ -30,7 +30,7 @@ try:
 except OSError:
 	pass
 
-for i in range(10):
+for i in range(COUNT):
 	# first image path, to check exists
 	img_path = None
 	randnum = 0
