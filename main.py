@@ -17,6 +17,7 @@ OUTPUT_DIR_NAME = 'output'
 OUTPUT_TXT_NAME = 'list.csv'
 NUMBER_OFFSET_X = 195
 NUMBER_OFFSET_Y = 457
+NUMBER_SIZE = 25
 FONT_FILE = "Helovetica.dfont"
 
 
@@ -50,7 +51,7 @@ for i in range(10):
 
 	img = qr.make_image()
 	draw = ImageDraw.Draw(img)
-	font = ImageFont.truetype(FONT_FILE, 25)
+	font = ImageFont.truetype(FONT_FILE, NUMBER_SIZE)
 	draw.text((NUMBER_OFFSET_X, NUMBER_OFFSET_Y), str(randnum), font=font)
 
 	print 'Output Number:%s to "%s"' % (randnum, img_path)
