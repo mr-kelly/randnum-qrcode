@@ -18,7 +18,7 @@ NUMBER_OFFSET_X = 195
 NUMBER_OFFSET_Y = 457
 NUMBER_SIZE = 25
 FONT_FILE = "Helvetica.dfont"
-CORRECT = qrcode.constants.ERROR_CORRECT_H
+CORRECT = qrcode.constants.ERROR_CORRECT_L
 
 
 # create dir
